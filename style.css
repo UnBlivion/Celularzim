@@ -1,0 +1,54 @@
+html{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgba(114, 114, 114, 0.658);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    width: 275px;
+    height: 510px;
+    margin: 0;
+    top: 50px;
+    background-color: #040404;
+    border: solid 3px #909291;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+aside{
+    background-color: rgba(255, 255, 255, 0.048);
+    margin: 0;
+    margin: 30px 0 10px 0;
+}
+
+#tela{
+    width: 250px;
+    height: 400px;
+    background: linear-gradient(to bottom right, rgb(87, 87, 255), rgb(255, 68, 68));
+    border-radius: 3px;
+    transform: scale(0.001);
+    animation: cubic-bezier(0,1.24,1,.93);
+    transition: 0.1s;
+}
+
+#Home{
+    font-size: 25px;
+    padding: 3px;
+    border-radius: 100%;
+    background-color: #040404;
+    border: solid 3px #909291;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#Home:focus {
+    outline:0;
+}
