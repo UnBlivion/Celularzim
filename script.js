@@ -1,6 +1,9 @@
 let botao = document.querySelector("#Home");
 let onoff = true;
 
+let horas = new Date().getHours();
+let minutos = new Date().getMinutes();
+
 botao.onclick = ligar;
 
 function ligar() {
@@ -13,3 +16,6 @@ function ligar() {
         onoff = true;
     }
 }
+
+document.querySelector('#relogio').innerHTML = `${horas}:${minutos}`;
+console.log(`${horas}:${minutos}`);
