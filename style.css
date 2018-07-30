@@ -32,12 +32,25 @@ aside{
 #tela{
     width: 250px;
     height: 400px;
-    background: linear-gradient(to bottom right, rgb(87, 87, 255), rgb(255, 68, 68));
+    background: linear-gradient(to top right, rgb(87, 87, 255), rgb(255, 68, 68));
     border-radius: 3px;
-    transform: scale(0.001);
+    transform: scale(0.0005);
     animation: cubic-bezier(0,1.24,1,.93);
     transition: 0.15s;
     overflow: hidden;
+    position: relative;
+    flex-direction: column;
+}
+
+#telasenha{
+    width: 250px;
+    height: 400px;
+    background: linear-gradient(to bottom, rgb(255, 71, 71), rgb(110, 185, 255));
+    display: flex;
+    margin: 0;
+    transform: translateX(-100%) translateY(-100%);
+    transition: 0.5s;
+    animation: cubic-bezier(0,1.24,1,.93);
 }
 
 #telaInicial{
@@ -52,17 +65,18 @@ aside{
 #detalhes{
     background-color: rgba(0, 0, 0, 0.116);
     width: 100%;
-    height: 30px;
+    height: 25px;
     top: 0;
     display: flex;
     position: absolute;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 }
 
 #detalhes h2{
-    font-size: 14px;
-    margin: 0;
+    font-size: 13px;
+    margin: 0 5px;
     text-decoration: none;
     cursor: default;
     font-weight: 600;
@@ -95,23 +109,79 @@ footer{
     bottom: 0;
     display: flex;
     width: 100%;
-    height: 65px;
+    height: 55px;
     position: absolute;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
-footer button{
+.anime{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 40px;
+    font-family: sans-serif;
+    display: flex;
+    color: #04040462;
+    animation: zum 4s linear infinite;
+    text-decoration: none;
+    transform: rotate(0);
+    transition: 1s;
+}
+
+.anime:nth-child(1){
+    animation-delay: 000ms;
+}
+
+.anime:nth-child(2){
+    animation-delay: 400ms;
+}
+
+.anime:nth-child(3){
+    animation-delay: 800ms;
+}
+
+.anime:nth-child(4){
+    animation-delay: 1200ms;
+}
+
+.anime:nth-child(5){
+    animation-delay: 1600ms;
+}
+
+.anime:nth-child(6){
+    animation-delay: 2000ms;
+}
+
+@keyframes zum{
+    0%{
+        color: #04040423;
+    }
+    50%{
+        font-size: 55px;
+        color: rgba(0, 0, 0, 0.521);
+    }
+    100%{
+        color: #04040428;
+    }
+}
+
+/* footer button{
     background-color: rgba(2, 133, 255, 0.103);
     border: 2px solid rgb(46, 46, 46);
     border-radius: 30px;
-    padding: 10px;
-    width: 40%;
+    padding: 5px;
+    width: 60%;
     color: black;
+    font-size: 25px;
     cursor: pointer;
-    text-decoration: none;
     font-weight: bold;
 }
+
+footer button:focus{
+    outline: 0;
+} */
 
 #Home{
     font-size: 25px;
